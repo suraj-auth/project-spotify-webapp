@@ -132,7 +132,7 @@ function formatTime(seconds) {
 let prev = document.querySelector("#prev");
 prev.addEventListener("click", (e) => {
   console.log(song.src);
-  let prevText = song.src;
+  let prevText = song.src.split(".app")[1];
   let index = songs.indexOf(prevText);
   if (index == 0) {
     index = songs.length - 1;
@@ -144,7 +144,7 @@ prev.addEventListener("click", (e) => {
 // next song
 let next = document.querySelector("#next");
 next.addEventListener("click", (e) => {
-  let nextText = song.src;
+  let nextText = song.src.split(".app")[1];
   let index = songs.indexOf(nextText);
   if (index == songs.length - 1) {
     playmusic(songs[0]);
