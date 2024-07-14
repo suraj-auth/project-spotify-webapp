@@ -131,6 +131,7 @@ function formatTime(seconds) {
 // previous song
 let prev = document.querySelector("#prev");
 prev.addEventListener("click", (e) => {
+  console.log(song.src);
   let prevText = song.src;
   let index = songs.indexOf(prevText);
   if (index == 0) {
